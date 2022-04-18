@@ -1,7 +1,8 @@
-import { IService, IServiceArgs } from "./IService";
+import { IService, IServiceArgs } from './IService';
 
 export class Service implements IService {
   readonly name: string;
+
   readonly services: IService[];
 
   constructor(args: IServiceArgs) {
@@ -11,7 +12,7 @@ export class Service implements IService {
 
   async start() {
     console.log(`Service[${this.name}] starting...`);
-    await Promise.all(this.services.map(service => service.start()));
+    await Promise.all(this.services.map((service) => service.start()));
     await this.onStart();
     console.log(`Service[${this.name}] started!`);
   }
@@ -19,7 +20,7 @@ export class Service implements IService {
   async stop() {
     console.log(`Service[${this.name}] stopping...`);
     await this.onStop();
-    await Promise.all(this.services.map(service => service.stop()));
+    await Promise.all(this.services.map((service) => service.stop()));
     console.log(`Service[${this.name}] stopped!`);
   }
 
