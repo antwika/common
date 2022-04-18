@@ -8,7 +8,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
-      - uses: antwika/actions/packages/ci@main
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          sonar-token: ${{ secrets.SONAR_TOKEN }}
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
+      #- uses: antwika/actions/packages/ci@main
+      #  with:
+      #    github-token: ${{ secrets.GITHUB_TOKEN }}
+      #    sonar-token: ${{ secrets.SONAR_TOKEN }}
