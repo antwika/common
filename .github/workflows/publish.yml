@@ -4,8 +4,10 @@ on:
     tags:
       - "v*"
 jobs:
-  ci:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+      - uses: antwika/actions/packages/publish@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          sonar-token: ${{ secrets.SONAR_TOKEN }}
