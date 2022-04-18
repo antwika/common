@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/antwika/common/compare/v0.0.6...v0.0.7) (2022-04-18)
+
+
+### Features
+
+* add lint step to pre-commit hook ([957727a](https://github.com/antwika/common/commit/957727a1257481e321913075a57471d33b461b79))
+* status badges in readme ([3fee6a0](https://github.com/antwika/common/commit/3fee6a0973a353450aa2246e98c16fabdb996ef8))
+
+
+### Bug Fixes
+
+* adjust pre-commit hook to run using yarn ([902b8db](https://github.com/antwika/common/commit/902b8db5e857ff35e203a99261f800a13f145b8a))
+* set test coverage threshold to 100% ([91d71b3](https://github.com/antwika/common/commit/91d71b314a716ecb9141abe81877d1560a7a0a72))
+
 ### [0.0.6](https://github.com/antwika/common/compare/v0.0.5...v0.0.6) (2022-04-18)
 
 
