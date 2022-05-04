@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/antwika/common/compare/v0.0.7...v0.0.8) (2022-05-04)
+
+
+### Bug Fixes
+
+* enforce all classes in 'src/' to be tested for coverage report ([1627515](https://github.com/antwika/common/commit/16275150470094eabb783e3d4e16c69403cc8c37))
+
 ### [0.0.7](https://github.com/antwika/common/compare/v0.0.6...v0.0.7) (2022-04-18)
 
 
