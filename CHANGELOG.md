@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.13](https://github.com/antwika/common/compare/v0.0.12...v0.0.13) (2022-06-26)
+
+
+### Features
+
+* script for typedoc generation ([2f2d440](https://github.com/antwika/common/commit/2f2d4405fa5f91a491731351d38e43837e8468a3))
+
 ### [0.0.12](https://github.com/antwika/common/compare/v0.0.10...v0.0.12) (2022-06-26)
 
 ### 0.0.11 (2022-06-11)
