@@ -1,4 +1,26 @@
-import { IService, IServiceArgs } from './IService';
+import { ILogger } from './ILogger';
+import { IService } from './IService';
+
+/**
+ * Constructur arguments for Service implementations
+ * @see {@link Service}
+ */
+export interface ServiceArgs {
+  /**
+   * Name of the service.
+   */
+  name: string;
+
+  /**
+   * A list of services that is owned and managed by this service.
+   */
+  services: IService[];
+
+  /**
+   * Logger instance
+   */
+  logger?: ILogger;
+}
 
 /**
  * Base class for services to extend from.
@@ -15,11 +37,18 @@ export class Service implements IService {
   readonly services: IService[];
 
   /**
+   * Logger instance
+   */
+  readonly logger?: ILogger;
+
+  /**
    * Constructor
    */
-  constructor(args: IServiceArgs) {
+  constructor(args: ServiceArgs) {
+    if (!args.logger) console.warn('Provide a logger instance to the Service constructor! This will be enforced in next major version!');
     this.name = args.name;
     this.services = args.services;
+    this.logger = args.logger;
   }
 
   /**
@@ -27,10 +56,10 @@ export class Service implements IService {
    * Sub-services are launched before the onStart lifecycle function is called.
    */
   async start() {
-    console.log(`Service[${this.name}] starting...`);
+    this.logger?.info(`Service[${this.name}] starting...`);
     await Promise.all(this.services.map((service) => service.start()));
     await this.onStart();
-    console.log(`Service[${this.name}] started!`);
+    this.logger?.info(`Service[${this.name}] started!`);
   }
 
   /**
@@ -38,10 +67,10 @@ export class Service implements IService {
    * Sub-services are stopped after the onStop lifecycle function has been called.
    */
   async stop() {
-    console.log(`Service[${this.name}] stopping...`);
+    this.logger?.info(`Service[${this.name}] stopping...`);
     await this.onStop();
     await Promise.all(this.services.map((service) => service.stop()));
-    console.log(`Service[${this.name}] stopped!`);
+    this.logger?.info(`Service[${this.name}] stopped!`);
   }
 
   /**

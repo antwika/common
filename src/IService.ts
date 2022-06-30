@@ -1,3 +1,5 @@
+import { ILogger } from './ILogger';
+
 /**
  * Common interface for services.
  */
@@ -11,6 +13,11 @@ export interface IService {
    * A list of services that is owned and managed by this service.
    */
   services: IService[];
+
+  /**
+   * Logger instance
+   */
+   logger?: ILogger;
 
   /**
    * Function to start the service (and implicitly starting its sub-services).
@@ -31,20 +38,4 @@ export interface IService {
    * Lifecycle function called immediately when the service is instructed to stop.
    */
   onStop(): Promise<void>;
-}
-
-/**
- * Constructur arguments for Service implementations
- * @see {@link Service}
- */
-export interface IServiceArgs {
-  /**
-   * Name of the service.
-   */
-  name: string;
-
-  /**
-   * A list of services that is owned and managed by this service.
-   */
-  services: IService[];
 }
