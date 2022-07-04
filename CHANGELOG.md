@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.15](https://github.com/antwika/common/compare/v0.0.14...v0.0.15) (2022-07-04)
+
+
+### Bug Fixes
+
+* restore IServiceArgs for backwards compatibility and marked IServiceArgs as [@deprecated](https://github.com/deprecated) ([59e0f50](https://github.com/antwika/common/commit/59e0f50b532b510ac4104d05d8fbfb540428adcd))
+
 ### [0.0.14](https://github.com/antwika/common/compare/v0.0.13...v0.0.14) (2022-07-04)
 
 
