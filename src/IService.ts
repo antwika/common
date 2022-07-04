@@ -39,3 +39,20 @@ export interface IService {
    */
   onStop(): Promise<void>;
 }
+
+/**
+ * @deprecated - Use {@link ServiceArgs}
+ * Constructur arguments for Service implementations
+ * @see {@link Service}
+ */
+export interface IServiceArgs {
+  /**
+   * Name of the service.
+   */
+  name: string;
+
+  /**
+   * A list of services that is owned and managed by this service.
+   */
+  services: IService[];
+}
