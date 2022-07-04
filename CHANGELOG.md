@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.14](https://github.com/antwika/common/compare/v0.0.13...v0.0.14) (2022-07-04)
+
+
+### Features
+
+* add Logger and ConsoleLogger implementation ([ec16e7f](https://github.com/antwika/common/commit/ec16e7fa8777df9ecfd2b5b1104cd4b790ce277b))
+* add logger instance to service constructor arguments ([98d9b59](https://github.com/antwika/common/commit/98d9b595b4341855552045cd8d9235c087eb234a))
+* release package every Monday at 12:15 UTC ([5cd462b](https://github.com/antwika/common/commit/5cd462b8f39e04e6b1f0114eb6a76986bc5d27b7))
+
 ### [0.0.13](https://github.com/antwika/common/compare/v0.0.12...v0.0.13) (2022-06-26)
 
 
