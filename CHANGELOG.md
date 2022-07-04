@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.16](https://github.com/antwika/common/compare/v0.0.15...v0.0.16) (2022-07-04)
+
+
+### Bug Fixes
+
+* add missing export ([4f0ecec](https://github.com/antwika/common/commit/4f0ecec50aa6f292a50117138b4201b2f6b6bb6a))
+
 ### [0.0.15](https://github.com/antwika/common/compare/v0.0.14...v0.0.15) (2022-07-04)
 
 
